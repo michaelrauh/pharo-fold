@@ -1,3 +1,4 @@
 # Pocket Square
 
 This is a prototype for a [silkworm](https://github.com/michaelrauh/silkworm) based elaboration on [polyvinyl-acetate](https://github.com/michaelrauh/polyvinyl-acetate). For a first version, it is intended to run locally and in-memory, and demonstrate the concepts of text folding with early aborts and state merging. If this goes well, it can be adapted to different state holding backends, scaled, or rewritten back into Rust. Ideally it should be able to borrow approaches from [online-fold](https://github.com/michaelrauh/online-fold) or [point-fold](https://github.com/michaelrauh/point-fold)
+## Installation```stMetacello new	repository: 'github://michaelrauh/pocket-square:main/src';	baseline: 'PocketSquare';	load```
