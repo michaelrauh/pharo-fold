@@ -32,7 +32,30 @@ Book >> gtPairsFor: aView [
 { #category : #accessing }
 Book >> minimalExampleFor2x2 [
 	<gtExample>
-	^ Book fromText: 'a b. c d. a c. b d.'
+	| b |
+	b := Book fromText: 'a b. c d. a c. b d.'.
+	self assert: b pairs size equals: 4.
+	^ b
+]
+
+{ #category : #accessing }
+Book >> pairs [
+^ pairs
+]
+
+{ #category : #accessing }
+Book >> projectBackward: from [
+	^ pairs select: [ :pair | (pair second) = from ]
+]
+
+{ #category : #accessing }
+Book >> projectForward: from [
+	^ pairs select: [ :pair | (pair first) = from ]
+]
+
+{ #category : #'as yet unclassified' }
+Book >> setBook: aBook [ 
+	book := aBook.
 ]
 
 { #category : #accessing }
